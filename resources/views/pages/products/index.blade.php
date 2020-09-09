@@ -24,20 +24,20 @@
                 <tbody>
                   @forelse ($items as $item)
                   <tr>
-                    <td>{{ $item->id }}</td>
+                    <td>{{ $item->product_id }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->type }}</td>
                     <td>{{ $item->price }}</td>
                     <td>{{ $item->quantity }}</td>
                     <td>
-                      {{-- <a href="{{ route('products.gallery', $item->id) }}" class="btn btn-info btn-sm"> --}}
+                      {{-- <a href="{{ route('products.gallery', $item->product_id) }}" class="btn btn-info btn-sm"> --}}
                       <a href="#" class="btn btn-info btn-sm">
                         <i class="fa fa-picture-o"></i>
                       </a>
-                      <a href="{{ route('products.edit', $item->id) }}" class="btn btn-primary btn-sm">
+                      <a href="{{ route('products.edit', $item->product_id) }}" class="btn btn-primary btn-sm">
                         <i class="fa fa-pencil"></i>
                       </a>
-                      <form action="{{ route('products.destroy', $item->id) }}" method="POST" class="d-inline">
+                      <form action="{{ route('products.destroy', $item->product_id) }}" method="POST" class="d-inline">
                         @method('delete')
                         @csrf
                         <button class="btn btn-danger btn-sm">

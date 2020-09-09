@@ -15,7 +15,7 @@ class CreateProductGalleriesTable extends Migration
     {
         Schema::create('product_galleries', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('products_id');
+            $table->integer('product_id');
             $table->string('photo');
             $table->boolean('is_default');
 

@@ -14,7 +14,7 @@ class CreateTransactionTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('transaction_id');
             $table->string('uuid');
             $table->string('name');
             $table->string('email');
