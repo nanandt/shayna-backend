@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Models\ProductGallery;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class Product extends Model
 {
@@ -24,6 +26,6 @@ class Product extends Model
 
     public function galleries()
     {
-        // return $this->hasMany(ProductGallery::class, 'product_id');
+        return $this->hasMany(ProductGallery::class, 'product_id');
     }
 }
