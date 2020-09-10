@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{DashboardController, ProductController, ProductGalleryController};
+use App\Http\Controllers\{DashboardController, ProductController, ProductGalleryController, TransactionController};
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +28,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::resource('products', ProductController::class);
 Route::resource('product-galleries', ProductGalleryController::class);
+Route::resource('transactions', TransactionController::class);
