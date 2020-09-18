@@ -47,12 +47,12 @@
                     </td>
                     <td>
                       @if($item->transaction_status == 'PENDING')
-                        {{-- <a href="{{ route('transactions.status', $item->transaction_id) }} ? status=SUCCESS" class="btn btn-success btn-sm">
+                        <a href="{{ route('transactions.status', $item->transaction_id) }}?status=SUCCESS" class="btn btn-success btn-sm">
                           <i class="fa fa-check"></i>
                         </a>
-                        <a href="{{ route('transactions.status', $item->transaction_id) }} ? status=FAILED" class="btn btn-warning btn-sm">
+                        <a href="{{ route('transactions.status', $item->transaction_id) }}?status=FAILED" class="btn btn-danger btn-sm">
                           <i class="fa fa-times"></i>
-                        </a> --}}
+                        </a>
                       @endif
                       <a href="#mymodal"
                         data-remote="{{ route('transactions.show', $item->transaction_id) }}"
@@ -76,7 +76,7 @@
                   </tr>
                   @empty
                     <tr>
-                      <td colspan="6" class="text-center p-5">
+                      <td colspan="8" class="text-center p-5">
                         Data Transaksi Kosong
                       </td>
                     </tr>

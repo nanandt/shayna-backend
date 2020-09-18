@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\{DashboardController, ProductController, ProductGalleryController, TransactionController};
+use App\Models\Transaction;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::resource('products', ProductController::class);
 Route::resource('product-galleries', ProductGalleryController::class);
+
+Route::get('transactions/{id}/set-status', [TransactionController::class, 'setStatus'])
+        ->name('transactions.status');
+
 Route::resource('transactions', TransactionController::class);
