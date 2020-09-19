@@ -11,7 +11,7 @@
 			<div class="header-menu">
 
 					<div class="user-area dropdown float-right">
-							<a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a href="{{ route('logout') }}" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
 							</a>
 
