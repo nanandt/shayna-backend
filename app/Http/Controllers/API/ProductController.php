@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
   public function all(Request $request)
   {
-    $id = $request->input('id');
+    $product_id = $request->input('product_id');
     $limit = $request->input('limit', 6);
     $name = $request->input('name');
     $slug = $request->input('slug');
@@ -19,9 +19,9 @@ class ProductController extends Controller
     $price_form = $request->input('price_form');
     $price_to = $request->input('price_to');
 
-    if($id)
+    if($product_id)
     {
-        $product = Product::with('galleries')->find($id);
+        $product = Product::with('galleries')->find($product_id);
 
         if($product)
 
